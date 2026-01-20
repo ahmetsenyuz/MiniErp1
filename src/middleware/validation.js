@@ -15,7 +15,7 @@ const validateProduct = (req, res, next) => {
 
 const validateUniqueSKU = (req, res, next) => {
   // This middleware would typically check against database
-  // For now, we'll assume it's handled by the service layer
+  // For now, we'll just pass through to the next middleware/route handler
   next();
 };
 
