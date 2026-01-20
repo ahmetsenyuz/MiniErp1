@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const ProductDetail = ({ productId }) => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null;
 
   useEffect(() => {
     fetchProduct();
@@ -11,7 +11,7 @@ const ProductDetail = ({ productId }) => {
 
   const fetchProduct = async () => {
     if (!productId) return;
-    
+
     try {
       const response = await fetch(`/api/products/${productId}`);
       if (!response.ok) {
@@ -38,7 +38,7 @@ const ProductDetail = ({ productId }) => {
           &larr; Back to List
         </button>
       </div>
-      
+
       <div className="product-info">
         <div className="info-item">
           <strong>SKU:</strong> {product.sku}
@@ -50,7 +50,7 @@ const ProductDetail = ({ productId }) => {
           <strong>ID:</strong> {product.id}
         </div>
       </div>
-      
+
       <div className="product-actions">
         <button 
           onClick={() => window.location.href = `/products/${productId}/edit`}
@@ -65,11 +65,11 @@ const ProductDetail = ({ productId }) => {
                 const response = await fetch(`/api/products/${productId}`, {
                   method: 'DELETE'
                 });
-                
+
                 if (!response.ok) {
                   throw new Error('Failed to delete product');
                 }
-                
+
                 alert('Product deleted successfully');
                 window.location.href = '/products';
               } catch (err) {
