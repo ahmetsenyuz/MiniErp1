@@ -5,10 +5,12 @@ const app = express();
 app.use(express.json());
 
 // Routes
+const salesOrderRoutes = require('./routes/salesOrderRoutes');
 const purchaseRoutes = require('./routes/purchaseRoutes');
 const productRoutes = require('./routes/productRoutes');
 const supplierRoutes = require('./routes/supplierRoutes');
 
+app.use('/sales-orders', salesOrderRoutes);
 app.use('/purchases', purchaseRoutes);
 app.use('/products', productRoutes);
 app.use('/suppliers', supplierRoutes);
