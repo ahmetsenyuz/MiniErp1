@@ -47,7 +47,7 @@ const ProductList = () => {
   return (
     <div className="product-list">
       <h2>Product Catalog</h2>
-      
+
       {/* Search and Filter Controls */}
       <div className="controls">
         <input
