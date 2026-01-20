@@ -1,0 +1,29 @@
+{
+  "name": "mini-erp",
+  "version": "1.0.0",
+  "description": "A Mini-ERP system for managing business operations",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "erp",
+    "mini-erp",
+    "business",
+    "inventory",
+    "sales"
+  ],
+  "author": "MiniErp1 Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "nodemon": "^3.0.1"
+  }
+}
