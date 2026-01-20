@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.json({ message: 'Welcome to MiniErp1 API' });
 });
 
+// Product Routes
+const productRoutes = require('./routes/productRoutes');
+app.use('/products', productRoutes);
+
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/mini-erp', {
   useNewUrlParser: true,
